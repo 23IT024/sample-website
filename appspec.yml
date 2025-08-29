@@ -3,9 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/html
-
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: deploy-scripts/install.sh
-      timeout: 300
+      timeout: 180
       runas: root
